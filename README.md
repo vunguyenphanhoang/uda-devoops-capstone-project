@@ -1,8 +1,8 @@
 # Uda Capstone Project
 
 >My website: [My Site](a593aa293405c487782c2a526ec64fac-1026751491.us-west-2.elb.amazonaws.com)
->My github: [Github]()
->ci/cd pipelines: [circleci]()
+>My github: [Github](https://github.com/vunguyenphanhoang/uda-devoops-capstone-project/edit/main/README.md)
+
 
 ## Overview
 
