@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    po = f"<h1> Captone Project of Udacity VUNPH </h1>"
+    po = "<h1> Captone Project of Udacity VUNPH </h1>"
     return po.format(format)
 
 if __name__ == '__main__':

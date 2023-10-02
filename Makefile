@@ -4,11 +4,11 @@ setup:
 	# source ~/.devops/bin/activate
 
 install:
-	echo ":::: Install dependencies ::::"
+	echo "dependencies install"
 	pip install --upgrade pip && pip install -r app/requirements.txt
 
 install-hadolint:
-	echo ":::: Installing hadolint ::::"
+	echo "hadolint"
 	sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 && chmod +x /bin/hadolint
 
 install-docker:
@@ -24,15 +24,15 @@ install-eskctl:
 	./install-eksctl.sh
 
 run-docker:
-	echo ":::: RUN DOCKER ::::"
+	echo "docker"
 	docker run -t --rm -p 80:80 devoops-capstone
 
 build-docker:
-	echo ":::: BUILD DOCKER ::::"
+	echo "docker build"
 	docker build --tag devoops-capstone app
 
 upload-docker:
-	echo ":::: UPLOAD DOCKER ::::"
+	echo "push docker"
 	docker login -u nvnhan
 	docker image tag devoops-capstone nvnhan/devoops-capstone:v1
 	docker push nvnhan/devoops-capstone:v1
